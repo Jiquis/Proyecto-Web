@@ -1,0 +1,59 @@
+{% extends 'base/base.html'%}
+
+{% block title %}LOGIN {% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/home/luis-covarrubias/Documentos/Python/Proyecto/LuckyShot/templates/css/style.css"> 
+    <title>Login</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <nav class="navbar" style="display: flex; justify-content: center; align-items: center;">
+        <div class="navbar-brand"   >
+            <div class="navbar-brand-text">    
+                <span style= "font-family: Georgia, serif; font-size: 2.5em; color: aliceblue;" >Lucky Shot</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container login-container" >
+        <div class="row justify-content-center" >
+            <div class="col-md-6" >
+                <div class="card"style="border-top-style: solid; border-top-color: #4A81F0; border-radius: 15px; border-top-width: 5px;">
+                    <div class="card-header" style="display: flex; justify-content: center; align-items: center;">
+                        <img class="logo" src="logo.png" alt="Logo" style="border-radius: 10px;"> 
+                    </div>
+                    <div class="card-body"  >
+                        <form>
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input type="text" class="form-control" id="username" placeholder="Enter your username">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Login</button>
+                        </form>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">
+                            Don't have an account? <a href="#">Register</a>
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+{% endblock content%}

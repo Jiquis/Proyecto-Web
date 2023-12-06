@@ -1,0 +1,94 @@
+{% extends 'base/base.html'%}
+
+{% block title %}APUESTAS {% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/home/luis-covarrubias/Documentos/Python/Proyecto/LuckyShot/templates/css/style.css"> 
+    <style>
+        .profile-image {
+            width: 50px; 
+            height: 50px; 
+            border-radius: 50%; 
+            object-fit: cover; 
+            margin-right: 10px;
+        }
+
+        
+        .profile-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .search-bar {
+            margin-bottom: 20px;
+        }
+    </style>
+    <title>Profile View</title>
+</head>
+<body>
+
+    <div class="header">
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <div class="container-fluid">
+                <img src="logo.png" alt="Image description">
+                <a class="navbar-brand" href="#">Lucky Shot</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav ms-auto"> <!-- Changed to ms-auto for right alignment -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Bets</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Support</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="search-bar">
+                    
+                    <input type="text" class="form-control" placeholder="Search...">
+                </div>
+                <div class="card profile-container">
+                    <div class="card-body">
+                        <div class="profile-details">
+                            <div>
+                                <img src="Perfil sin foto.jpg" alt="Profile Picture" class="profile-image">
+                                <h2>User Name</h2>
+                                <p>Email: user@example.com</p>
+                                <p>Bio: bio expleeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee.</p>
+                            </div>
+                            
+                            <button type="button" class="btn btn-primary">Modify Profile</button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+{% endblock content%}

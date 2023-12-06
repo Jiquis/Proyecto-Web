@@ -1,0 +1,153 @@
+{% extends 'base/base.html'%}
+
+{% block title %}PAYBET {% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/home/luis-covarrubias/Documentos/Python/Proyecto/LuckyShot/templates/css/style.css"> 
+    <style>
+        
+        
+        .seleccion-monto {
+            text-align: center;
+            color: #fff; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .table-container {
+            background-color: rgba(90, 45, 45, 0.8); 
+            border-radius: 10px;
+            padding: 20px;
+            filter: grayscale(100%); 
+        }
+
+        .monto-container,
+        .condiciones-container,
+        .botones-container {
+            display: table-row;
+        }
+
+        .monto-label,
+        .monto-input,
+        .botones-monto,
+        .boton-introducir,
+        .boton-proceder {
+            display: table-cell;
+            padding: 10px;
+            vertical-align: middle; 
+        }
+
+        .botones-monto {
+            display: flex;
+            align-items: center;
+            justify-content: center; 
+        }
+
+       
+        .btn-primary {
+            background-color: #555555;
+            color: #fff;
+            border: 2px solid #555555;
+            filter: grayscale(100%);
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background-color: #3d3d3d;
+        }
+    </style>
+    <title>PayBet</title>
+</head>
+<body>
+    <div class="header">
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <div class="container-fluid">
+                <img src="logo.png" alt="Image description">
+                <a class="navbar-brand" href="#">Lucky Shot</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav ms-auto"> <!-- Changed to ms-auto for right alignment -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Bets</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Support</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    
+    <!-- Bootstrap Scripts (Bootstrap 5) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+
+    <div class="seleccion-monto">
+        
+        <div class="table-container">
+            <div class="card-header" style="display: flex; justify-content: center; align-items: center;">
+                <img class="logo" src="logo.png" alt="Logo" style="border-radius: 10px;"> 
+            </div>
+            <div class="monto-container">
+                <span class="monto-label">Bet in Dollars:</span>
+            </div>
+            <div class="monto-container">
+                <div class="botones-monto">
+                    <button id="decrementar" class="btn-primary">-</button>
+                    <input type="text" class="monto-input" value="100" readonly>
+                    <button id="incrementar" class="btn-primary">+</button>
+                </div>
+            </div>
+
+            <div class="condiciones-container">
+                <label for="condiciones">
+                    <input type="checkbox" id="condiciones"> Accept terms and conditions
+                </label>
+            </div>
+
+            <div class="condiciones-container">
+                <label for="confirmacion">
+                    <input type="checkbox" id="confirmacion"> Confirm my bet amount
+                </label>
+            </div>
+
+            <div class="botones-container">
+                <button class="btn-primary boton-introducir">Enter banking information</button>
+                <button class="btn-primary boton-proceder">Proceed with the bet</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('incrementar').addEventListener('click', function() {
+            var montoInput = document.querySelector('.monto-input');
+            montoInput.value = parseInt(montoInput.value) + 100;
+        });
+
+        document.getElementById('decrementar').addEventListener('click', function() {
+            var montoInput = document.querySelector('.monto-input');
+            if (parseInt(montoInput.value) > 1) {
+                montoInput.value = parseInt(montoInput.value) - 100;
+            }
+        });
+    </script>
+</body>
+</html>
+{% endblock content%}

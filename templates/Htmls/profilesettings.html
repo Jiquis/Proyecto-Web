@@ -1,0 +1,103 @@
+{% extends 'base/base.html'%}
+
+{% block title %}APUESTAS {% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/home/luis-covarrubias/Documentos/Python/Proyecto/LuckyShot/templates/css/style.css"> 
+    <style>
+        .profile-image {
+            width: 50px; 
+            height: 50px; 
+            border-radius: 50%; 
+            object-fit: cover; 
+            margin-right: 10px;
+        }
+    </style>
+    <title>Profile Settings</title>
+</head>
+<body>
+    <div class="header">
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <div class="container-fluid">
+                <img src="logo.png" alt="Image description">
+                <a class="navbar-brand" href="#">Lucky Shot</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav ms-auto"> <!-- Changed to ms-auto for right alignment -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Bets</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Support</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="mb-0">Profile Settings</h4>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                                <img src="Perfil sin foto.jpg" alt="Profile Picture" class="profile-image">
+                                <br> 
+                                <label for="username">Username</label>
+                                <input type="text" class="form-control" id="username" placeholder="Enter your username">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Public Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                            </div>
+                            <div class="form-group">
+                                <label for="bio">Bio</label>
+                                <textarea class="form-control" id="bio" rows="3" placeholder="Tell us about yourself"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="profilePicture">Profile Picture</label>
+                                <input type="file" >
+                            </div>
+                            <div class="form-group">
+                                <div class="btn-group privacy-btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-secondary active">
+                                        <input type="radio" name="privacy" id="public" autocomplete="off" checked> Public
+                                    </label>
+                                    <label class="btn btn-secondary">
+                                        <input type="radio" name="privacy" id="private" autocomplete="off"> Private
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button type="button" class="btn btn-secondary btn-cancel">Cancel Changes</button>
+                                <button type="submit" class="btn btn-primary btn-save">Save and Go Back</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+{% endblock content%}
