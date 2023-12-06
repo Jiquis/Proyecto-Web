@@ -9,15 +9,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/home/luis-covarrubias/Documentos/Python/Proyecto/LuckyShot/templates/css/style.css"> 
+    <link rel="stylesheet" href="static/css/style.css"> 
     <title>Betting</title>
     <style>
         body {
-            background-image: url('../css/loginfondo.png'); 
-            background-size: cover; 
-            background-position: center; 
-            background-repeat: no-repeat; 
-        }
+            background: url('static/imagenes/loginfondo.png') center center fixed;
+            background-size: cover;
+            color: #ffd700;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
         .table th, .table td {
             color: white;
@@ -28,32 +30,36 @@
     <div class="header">
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
             <div class="container-fluid">
-                <img src="logo.png" alt="Descripción de la imagen">
-              <a class="navbar-brand" href="#">Lucky Shot</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav">  
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dropdown</a>
-                    <ul class="dropdown-menu dropdown-menu-start">
-                      <li><a class="dropdown-item" href="#">Link</a></li>
-                      <li><a class="dropdown-item" href="#">Another link</a></li>
-                      <li><a class="dropdown-item" href="#">A third link</a></li>
+                <img src="static/imagenes/logo.png" alt="Image description">
+                <a class="navbar-brand" href="#">Lucky Shot</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav ms-auto"> <!-- Changed to ms-auto for right alignment -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Bets</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Support</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Logout</a>
+                        </li>
                     </ul>
-                  </li>
-                </ul>
-              </div>
+                </div>
             </div>
-          </nav>      
+        </nav>
     </div>
     <div class="container login-container">
         <div class="row justify-content-center">
             <div class="col-md-10">
                 <div class="card" style="border-top-style: solid; border-top-color: #4A81F0; border-radius: 15px; border-top-width: 5px;">
                     <div class="card-header" style="display: flex; justify-content: center; align-items: center;">
-                        <img class="logo" src="logo.png" alt="Logo" style="border-radius: 10px;"> 
+                        <img class="logo" src="static/imagenes/logo.png" alt="Logo" style="border-radius: 10px;"> 
                     </div>
                     <div class="card-body">
                         <table class="table table-striped">

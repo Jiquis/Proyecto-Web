@@ -9,10 +9,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/home/luis-covarrubias/Documentos/Python/Proyecto/LuckyShot/templates/css/style.css"> 
+    <link rel="stylesheet" href="static/css/style.css"> 
     <style>
         
-        
+        body {
+        background: url('static/imagenes/loginfondo.png') center center fixed;
+        background-size: cover;
+        color: #ffd700;
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
         .seleccion-monto {
             text-align: center;
             color: #fff; 
@@ -70,7 +77,7 @@
     <div class="header">
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
             <div class="container-fluid">
-                <img src="logo.png" alt="Image description">
+                <img src="static/imagenes/logo.png" alt="Image description">
                 <a class="navbar-brand" href="#">Lucky Shot</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                     <span class="navbar-toggler-icon"></span>
@@ -103,7 +110,7 @@
         
         <div class="table-container">
             <div class="card-header" style="display: flex; justify-content: center; align-items: center;">
-                <img class="logo" src="logo.png" alt="Logo" style="border-radius: 10px;"> 
+                <img class="logo" src="static/imagenes/logo.png" alt="Logo" style="border-radius: 10px;"> 
             </div>
             <div class="monto-container">
                 <span class="monto-label">Bet in Dollars:</span>
