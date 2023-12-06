@@ -38,16 +38,16 @@
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
                     <ul class="navbar-nav ms-auto"> <!-- Changed to ms-auto for right alignment -->
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Bets</a>
+                            <a class="nav-link" href="apuestas_usuario">Bets</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Profile</a>
+                            <a class="nav-link" href="profile_view">Profile</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Support</a>
+                            <a class="nav-link" href="problems">Support</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Logout</a>
+                            <a class="nav-link" href="login_usuario">Logout</a>
                         </li>
                     </ul>
                 </div>
@@ -76,21 +76,21 @@
                                     <td>Team A</td>
                                     <td>Score more than 3 goals</td>
                                     <td>10:00 PM</td>
-                                    <td><button class="btn btn-primary btn-select">Select</button></td>
+                                    <td><a href="paybet_usuario" class="btn btn-primary btn-select">Select</a></td>
                                 </tr>
                                 <tr>
                                     <td>Team B</td>
                                     <td>Win by 2 goals</td>
                                     <td>11:00 PM</td>
-                                    <td><button class="btn btn-primary btn-select">Select</button></td>
+                                    <td><a href="paybet_usuario" class="btn btn-primary btn-select">Select</a></td>
                                 </tr>
                             </tbody>
                         </table>
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">Place Bet</button>
+                        
                     </div>
                     <div class="card-footer">
                         <small class="text-muted">
-                            Need help? <a href="#">Contact us</a>
+                            Need help? <a href="problems">Contact us</a>
                         </small>
                     </div>
                 </div>
@@ -98,16 +98,7 @@
         </div>
     </div>
 
-    <script>
-        // Script para manejar la selección/deselección de botones
-        const btnSelects = document.querySelectorAll('.btn-select');
-        
-        btnSelects.forEach(btn => {
-            btn.addEventListener('click', () => {
-                btn.classList.toggle('btn-selected');
-            });
-        });
-    </script>
+    
 </body>
 </html>
 {% endblock content%}

@@ -35,16 +35,16 @@
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
                     <ul class="navbar-nav ms-auto"> <!-- Changed to ms-auto for right alignment -->
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Bets</a>
+                            <a class="nav-link" href="apuestas_usuario">Bets</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Profile</a>
+                            <a class="nav-link" href="profile_view">Profile</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Support</a>
+                            <a class="nav-link" href="problems">Support</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Logout</a>
+                            <a class="nav-link" href="login_usuario">Logout</a>
                         </li>
                     </ul>
                 </div>
@@ -53,6 +53,10 @@
     </div>
     <!-- Bootstrap Scripts (Bootstrap 5) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <div id="success-alert" class="alert alert-success" style="display: none;">
+        <strong>Successfully placed your bet!</strong> In case of victory, the funds will be deposited into your account directly.
+    </div>    
     
 
     <div class="container login-container" >
@@ -93,13 +97,32 @@
                     </div>
                     <div class="card-footer">
                         <small class="text-muted">
-                            Need help? <a href="#">Contact us</a>
+                            Need help? <a href="problems">Contact us</a>
                         </small>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.querySelector('form');
+    
+            form.addEventListener('submit', function (event) {
+                event.preventDefault(); // Evita el envío predeterminado del formulario
+    
+                // Muestra la alerta de éxito
+                const successAlert = document.getElementById('success-alert');
+                successAlert.style.display = 'block';
+    
+                // Aquí puedes agregar lógica adicional, como enviar datos al servidor
+    
+                // Limpia el formulario (si es necesario)
+                form.reset();
+            });
+        });
+    </script>
+    
 </body>
 </html>
 

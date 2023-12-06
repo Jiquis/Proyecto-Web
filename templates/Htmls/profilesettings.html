@@ -41,16 +41,16 @@
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
                     <ul class="navbar-nav ms-auto"> <!-- Changed to ms-auto for right alignment -->
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Bets</a>
+                            <a class="nav-link" href="apuestas_usuario">Bets</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Profile</a>
+                            <a class="nav-link" href="profile_view">Profile</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Support</a>
+                            <a class="nav-link" href="problems">Support</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Logout</a>
+                            <a class="nav-link" href="login_usuario">Logout</a>
                         </li>
                     </ul>
                 </div>
@@ -68,7 +68,7 @@
                     <div class="card-body">
                         <form>
                             <div class="form-group">
-                                <img src="Perfil sin foto.jpg" alt="Profile Picture" class="profile-image">
+                                <img src="static/imagenes/Perfil sin foto.jpg" alt="Profile Picture" class="profile-image">
                                 <br> 
                                 <label for="username">Username</label>
                                 <input type="text" class="form-control" id="username" placeholder="Enter your username">
@@ -96,8 +96,8 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <button type="button" class="btn btn-secondary btn-cancel">Cancel Changes</button>
-                                <button type="submit" class="btn btn-primary btn-save">Save and Go Back</button>
+                                <a href="profile_view" type="button" class="btn btn-secondary btn-cancel">Cancel Changes</a>
+                                <a href="profile_view" type="submit" class="btn btn-primary btn-save">Save and Go Back</a>
                             </div>
                         </form>
                     </div>
