@@ -37,7 +37,6 @@ Covarrubias Rosales Luis Humberto
 - Opciones del sistemas
   - Ingreso al sistema
   - Registro o actualización de datos  
- -
  ## Introduccion
   
 Este manual está diseñado para ofrecerte una guía detallada y completa sobre el funcionamiento de nuestra plataforma en línea, proporcionándote las herramientas necesarias para disfrutar al máximo de todos los juegos y servicios que ofrecemos.
@@ -75,3 +74,9 @@ Ponemos la cantidad de la apuesta y damos click en el boton de **Enter banking i
 Una vez que llenemos los datos que nos solicitan damos click en **submit**
 > Nota: En la parte inferior de la pagina nos podremos encontrar con un link de ayuda, al dar click en el nos mostrara la siguiente imagen en donde podremos levantar un ticket
 ![](static/imagenes/tickets.png)
+### Perfil de usuario
+Para entrar a nuestro perfil de usuario, nos regresaremos al menu y en la parte superior derecha podremos encontrar el boton de **Profile**, damos click en el y nos mandara a la siguiente ventana 
+![](static/imagenes/perfilUsuario.png)
+### Modificar usuario 
+En caso de querer modificar alguno de nuestros datos de perfil, damos click en el boton **Modify profile** el cual nos mandara a la siguiente ventana 
+![](static/imagenes/editarPerfil.png)
