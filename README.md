@@ -56,3 +56,6 @@ En estas páginas, encontrarás información detallada sobre cómo navegar por n
 1.  **Conexión a Internet estable** 
 2.  **Dispositivo compatible** 
 3.  **Navegador web actualizado** 
+
+## Opciones del sistema
+### Login de usuario
