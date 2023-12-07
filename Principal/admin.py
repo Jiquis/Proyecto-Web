@@ -10,7 +10,17 @@ class UsuarioAdmin(admin.ModelAdmin):
 
 @admin.register(models.Apuesta)
 class ApuestaAdmin(admin.ModelAdmin):
-    list_display = ('id_apuesta', 'nombre_apuesta', 'id_usuario', 'monto', 'fecha_apuesta')
+    list_display = ('id_apuesta', 'nombre_apuesta', 'id_usuario', 'descripcion_apuesta', 'monto', 'fecha_apuesta')
+    search_fields = ['id_apuesta', 'nombre_apuesta']
+
+@admin.register(models.Apuestabasket)
+class ApuestabasketAdmin(admin.ModelAdmin):
+    list_display = ('id_apuesta', 'nombre_apuesta', 'id_usuario', 'descripcion_apuesta', 'monto', 'fecha_apuesta')
+    search_fields = ['id_apuesta', 'nombre_apuesta']
+
+@admin.register(models.Apuestatenis)
+class ApuestatenisAdmin(admin.ModelAdmin):
+    list_display = ('id_apuesta', 'nombre_apuesta', 'id_usuario', 'descripcion_apuesta', 'monto', 'fecha_apuesta')
     search_fields = ['id_apuesta', 'nombre_apuesta']
 
 @admin.register(models.TipoApuesta)

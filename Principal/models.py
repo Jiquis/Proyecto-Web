@@ -31,6 +31,29 @@ class UsuarioVIP(models.Model):
 class Apuesta(models.Model):
     id_apuesta = models.AutoField(primary_key=True)
     nombre_apuesta = models.CharField(max_length=100, default='')
+    descripcion_apuesta = models.CharField(max_length=100, default='')
+    monto = models.DecimalField(max_digits=10, decimal_places=2)
+    fecha_apuesta = models.DateTimeField(auto_now_add=True)
+    id_usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
+
+    def str(self):
+        return f"{self.id_apuesta} - Usuario: {self.id_usuario.nombre_usuario}, Monto: {self.monto}"
+
+class Apuestabasket(models.Model):
+    id_apuesta = models.AutoField(primary_key=True)
+    nombre_apuesta = models.CharField(max_length=100, default='')
+    descripcion_apuesta = models.CharField(max_length=100, default='')
+    monto = models.DecimalField(max_digits=10, decimal_places=2)
+    fecha_apuesta = models.DateTimeField(auto_now_add=True)
+    id_usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
+
+    def str(self):
+        return f"{self.id_apuesta} - Usuario: {self.id_usuario.nombre_usuario}, Monto: {self.monto}"
+    
+class Apuestatenis(models.Model):
+    id_apuesta = models.AutoField(primary_key=True)
+    nombre_apuesta = models.CharField(max_length=100, default='')
+    descripcion_apuesta = models.CharField(max_length=100, default='')
     monto = models.DecimalField(max_digits=10, decimal_places=2)
     fecha_apuesta = models.DateTimeField(auto_now_add=True)
     id_usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)

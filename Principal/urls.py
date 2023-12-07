@@ -15,6 +15,8 @@ urlpatterns = [
     path('profile_settings', views.ProfileSet, name='Profile settings'),
     path('profile_view', views.ProfileView, name='Profile view'),
     path('register_usuario', views.Register, name='Register'),
-    path('tabla_opciones', views.TablaOpciones, name='Tabla de opciones'),
+    path('tabla_opciones', views.TablaOpciones.as_view(), name='Tabla de opciones'),
+    path('tabla_opciones1', views.TablaOpciones1.as_view(), name='Tabla de opciones'),
+    path('tabla_opciones2', views.TablaOpciones2.as_view(), name='Tabla de opciones'),
     path('problems', views.Problems, name='problems'),
 ]

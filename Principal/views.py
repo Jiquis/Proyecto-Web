@@ -4,6 +4,9 @@ from django.views import generic
 from django.contrib.auth import views as auth_views
 
 from .models import Usuario
+from .models import Apuesta
+from .models import Apuestabasket
+from .models import Apuestatenis
 
 # Create your views here.
 class Index(generic.View):
@@ -13,6 +16,36 @@ class Index(generic.View):
     def get(self, request, *args, **kwargs):
         self.context = {
             "Usuario": Usuario.objects.all() 
+        }
+        return render(request, self.template_name, self.context)
+    
+class TablaOpciones(generic.View):
+    template_name = "Htmls/tabladeopciones.html"
+    context = {}
+
+    def get(self, request, *args, **kwargs):
+        self.context = {
+            "Apuesta": Apuesta.objects.all() 
+        }
+        return render(request, self.template_name, self.context)
+
+class TablaOpciones1(generic.View):
+    template_name = "Htmls/tablabasket.html"
+    context = {}
+
+    def get(self, request, *args, **kwargs):
+        self.context = {
+            "Apuesta1": Apuestabasket.objects.all() 
+        }
+        return render(request, self.template_name, self.context)
+    
+class TablaOpciones2(generic.View):
+    template_name = "Htmls/tablatenis.html"
+    context = {}
+
+    def get(self, request, *args, **kwargs):
+        self.context = {
+            "Apuesta2": Apuestatenis.objects.all() 
         }
         return render(request, self.template_name, self.context)
 
@@ -62,11 +95,6 @@ def ProfileView(request):
     }
     return render(request, "Htmls/ProfileView.html", context)
 
-def TablaOpciones(request):
-    context = {
-        
-    }
-    return render(request, "Htmls/tabladeopciones.html", context)
 
 def Register(request):
     context = {
