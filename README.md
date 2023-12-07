@@ -59,4 +59,19 @@ En estas páginas, encontrarás información detallada sobre cómo navegar por n
 
 ## Opciones del sistema
 ### Login de usuario
-![](Proyecto-Web/imagenes/loginRM.png)
+![](static/imagenes/loginRM.png)
+En esta ventana el usuario podra ingresar por medio de su correo y contraseña
+### Menu del usuario
+![](static/imagenes/menuRM.png)
+Dentro del menu podremos seleccionar el deporte al cual queremos apostar y damos click en el
+### Apuestas disponibles
+![](static/imagenes/apestasDisponibles.png)
+Aqui nos apareceran las apuestas disponibles, seleccionamos la apuestas y damos click en **select**
+### Monto de la apuesta 
+![](static/imagenes/montoApuesta.png)
+Ponemos la cantidad de la apuesta y damos click en el boton de **Enter banking information**
+### Datos bancarios
+![](static/imagenes/datosBancarios.png)
+Una vez que llenemos los datos que nos solicitan damos click en **submit**
+> Nota: En la parte inferior de la pagina nos podremos encontrar con un link de ayuda, al dar click en el nos mostrara la siguiente imagen en donde podremos levantar un ticket
+![](static/imagenes/tickets.png)
